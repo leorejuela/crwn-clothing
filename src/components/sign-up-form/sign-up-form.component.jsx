@@ -2,6 +2,8 @@ import { async } from '@firebase/util';
 import { useState } from 'react';
 import FormInput  from '../form-input/form-input.component';
 
+import Button from '../button/button.component';
+
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from '../../utils/firebase/firebase.utils'; 
 
 import './sign-up-form.styles.scss';
@@ -59,7 +61,7 @@ const SignUpForm = () => {
                 <FormInput label='Email' type='email' required onChange={handleChange} name='email' value={email}/>
                 <FormInput label='Password' type='password' required onChange={handleChange} name='password' value={password}/>
                 <FormInput label='Confirm Password' type='password' required onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
-                <button type='submit'>Sign Up</button>
+                <Button type='submit'>Sign Up</Button>
             </form>
         </div>
     );
